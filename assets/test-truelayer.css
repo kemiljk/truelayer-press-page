@@ -17,7 +17,7 @@
 }
 
 #crop-header-cloud-burst .header-bg-img {
-    background: transparent url("/img/header-bg-img.svg") no-repeat center / cover;
+    background: transparent url("../img/header-bg-img.svg") no-repeat center / cover;
 }
 
 /* #crop-header-cloud-burst .bg-layers-top-flipped {
@@ -57,7 +57,7 @@
 
 /* !Card bg image */
 .bg-layers-bottom-60 {
-    background: transparent url('/img/bg-layers-top-bottom-trans.svg') no-repeat center bottom / 100%;
+    background: transparent url('../img/bg-layers-top-bottom-trans.svg') no-repeat center bottom / 100%;
 }
 
 /* *Article cards */
@@ -199,7 +199,7 @@ img.border-radius-top {
 }
 
 .bg-twitter {
-    background: #f6f7f8 url('/img/twitter-section.svg') no-repeat center bottom / 100%;
+    background: #f6f7f8 url('../img/twitter-section.svg') no-repeat center bottom / 100%;
 }
 
 .twitter-card-container {
