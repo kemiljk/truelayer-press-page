@@ -2,6 +2,11 @@
 
 **You can view the page live at: [TrueLayer Press Page on GitHub](https://kemiljk.github.io/truelayer-press-page/)** 
 
+## Wayfinding/Research/References
+
+* I chose to reference a non-exhaustive list of press pages and news organisations to help influence structuring of the page
+* It felt logical to pull from these types of pages instead of reinventing the wheel as I wanted to ensure the site was user accessible and intuitive to navigate
+
 ## Decision process
 
 * I wanted to remain close to TrueLayer's brand. I firstly chose to review the live site in its entirety and record the page templates that I could notice
