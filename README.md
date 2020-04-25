@@ -1,5 +1,7 @@
 # README
 
+**You can view the page live at: [TrueLayer Press Page on GitHub](https://kemiljk.github.io/truelayer-press-page/)** 
+
 ## Decision process
 
 * I wanted to remain close to TrueLayer's brand. I firstly chose to review the live site in its entirety and record the page templates that I could notice
