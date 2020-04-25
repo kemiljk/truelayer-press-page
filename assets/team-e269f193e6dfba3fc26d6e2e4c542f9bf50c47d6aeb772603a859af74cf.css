@@ -1,0 +1,584 @@
+#grid li {
+    list-style-type: none;
+    position: relative;
+    width: 88%;
+    padding: 0 0 100% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
+    margin:0 auto;
+}
+
+#grid li * {
+    visibility: visible;
+}
+
+#grid li .hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+}
+
+.profile {
+    padding:0;
+    text-align: center;
+}
+
+.hiring .hexagon {
+    background: #f7ab1b;
+}
+
+.hiring:hover .hexagon {
+    background: transparent url("../img/team/hiring1.gif") no-repeat center / cover;
+}
+
+.hiring:hover h6 {
+    display: none;
+}
+
+.hiring h6 {
+    position: absolute;
+    top:0;
+    text-align: left;
+    font-size:13.5pt;
+    text-transform: none;
+    padding:35px 0 35px 20px;
+}
+
+.jarvis {
+    background: transparent url("../img/team/jarvis.jpg") no-repeat center / cover;
+}
+
+.jarvis:hover {
+    background: transparent url("../img/team/jarvis1.gif") no-repeat center / cover;
+}
+
+.raluca {
+    background: transparent url("../img/team/raluca.jpg") no-repeat center / cover;
+}
+
+.raluca:hover {
+    background: transparent url("../img/team/raluca1.gif") no-repeat center / cover;
+}
+
+.neil {
+    background: transparent url("../img/team/neil.jpg") no-repeat center / cover;
+}
+
+.neil:hover {
+    background: transparent url("../img/team/neil1.gif") no-repeat center / cover;
+}
+
+.simone {
+    background: transparent url("../img/team/simone.jpg") no-repeat center / cover;
+}
+
+.simone:hover {
+    background: transparent url("../img/team/simone1.gif") no-repeat center / cover;
+}
+
+.luca {
+    background: transparent url("../img/team/luca.jpg") no-repeat center / cover;
+}
+
+.luca:hover {
+    background: transparent url("../img/team/luca1.gif") no-repeat center / cover;
+}
+
+.riccardo {
+    background: transparent url("../img/team/riccardo.jpg") no-repeat center / cover;
+}
+
+.riccardo:hover {
+    background: transparent url("../img/team/riccardo1.gif") no-repeat center / cover;
+}
+
+.shefali {
+    background: transparent url("../img/team/shefali.jpg") no-repeat center / cover;
+}
+
+.shefali:hover {
+    background: transparent url("../img/team/shefali1.gif") no-repeat center / cover;
+}
+
+.vince {
+    background: transparent url("../img/team/vince.jpg") no-repeat center / cover;
+}
+
+.vince:hover {
+    background: transparent url("../img/team/vince1.gif") no-repeat center / cover;
+}
+
+.francesco {
+    background: transparent url("../img/team/francesco.jpg") no-repeat center / cover;
+}
+
+.francesco:hover {
+    background: transparent url("../img/team/francesco1.gif") no-repeat center / cover;
+}
+
+.mirta {
+    background: transparent url("../img/team/mirta.jpg") no-repeat center / cover;
+}
+
+.mirta:hover {
+    background: transparent url("../img/team/mirta2.gif") no-repeat center / cover;
+}
+
+.naomi {
+    background: transparent url("../img/team/naomi.jpg") no-repeat center / cover;
+}
+
+.naomi:hover {
+    background: transparent url("../img/team/naomi1.gif") no-repeat center / cover;
+}
+
+.nicki {
+    background: transparent url("../img/team/nicki.jpg") no-repeat center / cover;
+}
+
+.nicki:hover {
+    background: transparent url("../img/team/nicki1.gif") no-repeat center / cover;
+}
+
+.romain {
+    background: transparent url("../img/team/romain.jpg") no-repeat center / cover;
+}
+
+.romain:hover {
+    background: transparent url("../img/team/romain1.gif") no-repeat center / cover;
+}
+
+.liz {
+    background: transparent url("../img/team/liz.jpg") no-repeat center / cover;
+}
+
+.liz:hover {
+    background: transparent url("../img/team/liz1.gif") no-repeat center / cover;
+}
+
+.abrar {
+    background: transparent url("../img/team/abrar.jpg") no-repeat center / cover;
+}
+
+.abrar:hover {
+    background: transparent url("../img/team/abrar1.gif") no-repeat center / cover;
+}
+
+.gerisha {
+    background: transparent url("../img/team/gerisha.jpg") no-repeat center / cover;
+}
+
+.gerisha:hover {
+    background: transparent url("../img/team/gerisha1.gif") no-repeat center / cover;
+}
+
+.jennifer {
+    background: transparent url("../img/team/jennifer.jpg") no-repeat center / cover;
+}
+
+.jennifer:hover {
+    background: transparent url("../img/team/jennifer.gif") no-repeat center / cover;
+}
+
+.sean {
+    background: transparent url("../img/team/sean.jpg") no-repeat center / cover;
+}
+
+.sean:hover {
+    background: transparent url("../img/team/sean.gif") no-repeat center / cover;
+}
+
+.stefan {
+    background: transparent url("../img/team/stefan.jpg") no-repeat center / cover;
+}
+
+.stefan:hover {
+    background: transparent url("../img/team/stefan.gif") no-repeat center / cover;
+}
+
+.markn {
+    background: transparent url("../img/team/markn.jpg") no-repeat center / cover;
+}
+
+.markn:hover {
+    background: transparent url("../img/team/markn.gif") no-repeat center / cover;
+}
+
+.matt {
+    background: transparent url("../img/team/matt.jpg") no-repeat center / cover;
+}
+
+.matt:hover {
+    background: transparent url("../img/team/matt.gif") no-repeat center / cover;
+}
+
+.steve{
+    background: transparent url("../img/team/steve.jpg") no-repeat center / cover;
+}
+
+.steve:hover {
+    background: transparent url("../img/team/steve.gif") no-repeat center / cover;
+}
+
+.lucap{
+    background: transparent url("../img/team/lucap.jpg") no-repeat center / cover;
+}
+
+.lucap:hover {
+    background: transparent url("../img/team/lucap.gif") no-repeat center / cover;
+}
+
+.alex{
+    background: transparent url("../img/team/alex.jpg") no-repeat center / cover;
+}
+
+.alex:hover {
+    background: transparent url("../img/team/alex.gif") no-repeat center / cover;
+}
+
+.ares{
+    background: transparent url("../img/team/ares.jpg") no-repeat center / cover;
+}
+
+.ares:hover {
+    background: transparent url("../img/team/ares.gif") no-repeat center / cover;
+}
+
+.arthen{
+    background: transparent url("../img/team/arthen.jpg") no-repeat center / cover;
+}
+
+.arthen:hover {
+    background: transparent url("../img/team/arthen.gif") no-repeat center / cover;
+}
+
+.jiun{
+    background: transparent url("../img/team/jiun.jpg") no-repeat center / cover;
+}
+
+.jiun:hover {
+    background: transparent url("../img/team/jiun.gif") no-repeat center / cover;
+}
+
+
+.joao{
+    background: transparent url("../img/team/joao.jpg") no-repeat center / cover;
+}
+
+.joao:hover {
+    background: transparent url("../img/team/joao.gif") no-repeat center / cover;
+}
+
+
+.silvia{
+    background: transparent url("../img/team/silvia.jpg") no-repeat center / cover;
+}
+
+.silvia:hover {
+    background: transparent url("../img/team/silvia.gif") no-repeat center / cover;
+}
+
+.luis{
+    background: transparent url("../img/team/luis.jpg") no-repeat center / cover;
+}
+
+.luis:hover {
+    background: transparent url("../img/team/luis.gif") no-repeat center / cover;
+}
+
+.desi {
+    background: transparent url("../img/team/desi.jpg") no-repeat center / cover;
+}
+
+.desi:hover {
+    background: transparent url("../img/team/desi.gif") no-repeat center / cover;
+}
+
+.sebastien {
+    background: transparent url("../img/team/sebastien.jpg") no-repeat center / cover;
+}
+
+.sebastien:hover {
+    background: transparent url("../img/team/sebastien.gif") no-repeat center / cover;
+}
+
+.wol {
+    background: transparent url("../img/team/wol.jpg") no-repeat center / cover;
+}
+
+.wol:hover {
+    background: transparent url("../img/team/wol.gif") no-repeat center / cover;
+}
+
+.mohammad {
+    background: transparent url("../img/team/mohammad.jpg") no-repeat center / cover;
+}
+
+.mohammad:hover {
+    background: transparent url("../img/team/mohammad.gif") no-repeat center / cover;
+}
+
+.seanc {
+    background: transparent url("../img/team/sean_c.jpg") no-repeat center / cover;
+}
+
+.seanc:hover {
+    background: transparent url("../img/team/seanc.gif") no-repeat center / cover;
+}
+
+.alessio {
+    background: transparent url("../img/team/alessio.jpg") no-repeat center / cover;
+}
+
+.alessio:hover {
+    background: transparent url("../img/team/alessio.gif") no-repeat center / cover;
+}
+
+.julie {
+    background: transparent url("../img/team/julie.jpg") no-repeat center / cover;
+}
+
+.julie:hover {
+    background: transparent url("../img/team/julie.gif") no-repeat center / cover;
+}
+
+.salim {
+    background: transparent url("../img/team/salim.jpg") no-repeat center / cover;
+}
+
+.salim:hover {
+    background: transparent url("../img/team/salim.gif") no-repeat center / cover;
+}
+
+.chris {
+    background: transparent url("../img/team/chris.jpg") no-repeat center / cover;
+}
+
+.chris:hover {
+    background: transparent url("../img/team/chris.gif") no-repeat center / cover;
+}
+
+.alexandre {
+    background: transparent url("../img/team/alexandre.jpg") no-repeat center / cover;
+}
+
+.alexandre:hover {
+    background: transparent url("../img/team/alexandre.gif") no-repeat center / cover;
+}
+
+.yasmin {
+    background: transparent url("../img/team/yasmin.jpg") no-repeat center / cover;
+}
+
+.yasmin:hover {
+    background: transparent url("../img/team/yasmin.gif") no-repeat center / cover;
+}
+
+.craig {
+    background: transparent url("../img/team/craig.jpg") no-repeat center / cover;
+}
+
+.craig:hover {
+    background: transparent url("../img/team/craig.gif") no-repeat center / cover;
+}
+
+.sulman {
+    background: transparent url("../img/team/sulman.jpg") no-repeat center / cover;
+}
+
+.sulman:hover {
+    background: transparent url("../img/team/sulman.gif") no-repeat center / cover;
+}
+
+.david {
+    background: transparent url("../img/team/david.jpg") no-repeat center / cover;
+}
+
+.david:hover {
+    background: transparent url("../img/team/david.gif") no-repeat center / cover;
+}
+
+.naz {
+    background: transparent url("../img/team/naz.jpg") no-repeat center / cover;
+}
+
+.naz:hover {
+    background: transparent url("../img/team/naz.gif") no-repeat center / cover;
+}
+
+.jo {
+    background: transparent url("../img/team/jo.jpg") no-repeat center / cover;
+}
+
+.jo:hover {
+    background: transparent url("../img/team/jo.gif") no-repeat center / cover;
+}
+
+.lukas {
+    background: transparent url("../img/team/lukas.jpg") no-repeat center / cover;
+}
+
+.lukas:hover {
+    background: transparent url("../img/team/lukas.gif") no-repeat center / cover;
+}
+.william {
+    background: transparent url("../img/team/william.jpg") no-repeat center / cover;
+}
+
+.william:hover {
+    background: transparent url("../img/team/william.gif") no-repeat center / cover;
+}
+
+.ted {
+    background: transparent url("../img/team/ted.jpg") no-repeat center / cover;
+}
+
+.ted:hover {
+    background: transparent url("../img/team/ted.gif") no-repeat center / cover;
+}
+.marie {
+    background: transparent url("../img/team/marie.jpg") no-repeat center / cover;
+}
+
+.marie:hover {
+    background: transparent url("../img/team/marie.gif") no-repeat center / cover;
+}
+
+.alison {
+    background: transparent url("../img/team/alison.jpg") no-repeat center / cover;
+}
+
+.alison:hover {
+    background: transparent url("../img/team/alison.gif") no-repeat center / cover;
+}
+
+.jamish {
+    background: transparent url("../img/team/jamish.jpg") no-repeat center / cover;
+}
+
+.jamish:hover {
+    background: transparent url("../img/team/jamish.gif") no-repeat center / cover;
+}
+
+.suvi {
+    background: transparent url("../img/team/suvi.jpg") no-repeat center / cover;
+}
+
+.suvi:hover {
+    background: transparent url("../img/team/suvi.gif") no-repeat top / cover;
+}
+
+.lakshmi {
+    background: transparent url("../img/team/lakshmi.jpg") no-repeat center / cover;
+}
+
+.lakshmi:hover {
+    background: transparent url("../img/team/lakshmi.gif") no-repeat center / cover;
+}
+
+.george {
+    background: transparent url("../img/team/george.jpg") no-repeat center / cover;
+}
+
+.george:hover {
+    background: transparent url("../img/team/george.gif") no-repeat center / cover;
+}
+
+.matt_p {
+    background: transparent url("../img/team/matt_p.jpg") no-repeat center / cover;
+}
+
+.matt_p:hover {
+    background: transparent url("../img/team/matt_p.gif") no-repeat center / cover;
+}
+
+.alex_b {
+    background: transparent url("../img/team/alex_b.jpg") no-repeat center / cover;
+}
+
+.alex_b:hover {
+    background: transparent url("../img/team/alex_b.gif") no-repeat center / cover;
+}
+
+.caoan {
+    background: transparent url("../img/team/caoan.jpg") no-repeat center / cover;
+}
+
+.caoan:hover {
+    background: transparent url("../img/team/caoan.gif") no-repeat center / cover;
+}
+
+.carolina {
+    background: transparent url("../img/team/carolina.jpg") no-repeat center / cover;
+}
+
+.carolina:hover {
+    background: transparent url("../img/team/carolina.gif") no-repeat center / cover;
+}
+.jack {
+    background: transparent url("../img/team/jack.jpg") no-repeat center / cover;
+}
+.jack:hover {
+    background: transparent url("../img/team/jack.gif") no-repeat center / cover;
+}
+
+.james {
+    background: transparent url("../img/team/james.jpg") no-repeat center / cover;
+}
+.james:hover {
+    background: transparent url("../img/team/james.gif") no-repeat center / cover;
+}
+.kathryn {
+    background: transparent url("../img/team/kathryn.jpg") no-repeat center / cover;
+}
+.kathryn:hover {
+    background: transparent url("../img/team/kathryn.gif") no-repeat center / cover;
+}
+.laura {
+    background: transparent url("../img/team/laura.jpg") no-repeat center / cover;
+}
+.laura:hover {
+    background: transparent url("../img/team/laura.gif") no-repeat center / cover;
+}
+.rafik {
+    background: transparent url("../img/team/rafik.jpg") no-repeat center / cover;
+}
+.rafik:hover {
+    background: transparent url("../img/team/rafik.gif") no-repeat center / cover;
+}
+.hind {
+    background: transparent url("../img/team/hind.jpg") no-repeat center / cover;
+}
+.hind:hover {
+    background: transparent url("../img/team/hind.gif") no-repeat center / cover;
+}
+.bertie {
+    background: transparent url("../img/team/bertie.jpg") no-repeat center / cover;
+}
+
+.bertie:hover {
+    background: transparent url("../img/team/bertie.gif") no-repeat center / cover;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .hiring h6 {
+        padding: 20px 0 15px 20px;
+    }
+}
+
+
+
+

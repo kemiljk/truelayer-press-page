@@ -1,0 +1,1172 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Payments API | TrueLayer</title>
+    <meta name="description" content="Receive money instantly. Initiate a payment transaction so that your customers transfer funds directly to your bank account">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="/assets/bootstrap.min-dd063dc49950327e32ceb6c2d1e056d628f1c0fe743595c67b9f6a09bca404d5.css">
+
+<!-- TrueLayer -->
+<link rel="stylesheet" type="text/css" href="/assets/truelayer-6a676eea4fb8f25d0797e25acdec7d4b9ff28c85d6103f92b6104a102859839b.css">
+
+<!-- Main -->
+<link rel="stylesheet" type="text/css" href="/assets/main-3da1f8650d1e735e8c4eaa39bc897a0271e8593b2e08744022593b88277adad5.css">
+
+<!-- Team -->
+<link rel="stylesheet" type="text/css" href="/assets/team-e269f193e6dfba3fc26d6e2e4c542f9bf50c47d6aeb772603a859af74cfb24fb.css">
+
+<!-- Form dropdown -->
+<link rel="stylesheet" type="text/css" href="/assets/buttonBootstrapSnippet-90db2ae1c0bcaf8d7c22797af58ab1fbf7cf99f618bcedd44dfb66ebe51bb1ad.css">
+
+<!-- Mobile -->
+<link rel="stylesheet" type="text/css" href="/assets/mobile-81f7f0146973ee0afdc20fc1d2e364d3925de8348d6a092bff6c08e7ece00357.css">
+
+<!-- Flags -->
+<link rel="stylesheet" type="text/css" href="/assets/flag-icon.min-eeadead5aaacba1462539518716aee0081ead7b3d19382a3ce224f61b1c6556e.css">
+
+<!-- Syntax -->
+<link rel="stylesheet" type="text/css" href="/assets/syntax-d945a5950a86aacafbb1f1491a6dd327ee518024d741b9f3b40e90046335bcb9.css">
+
+<script type="text/javascript" src="/assets/js.cookies-d998fdf85439dfbfa4de9b5249751ff576922278cd1892d8c82e863246481950.js"></script>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/favicons/manifest.json">
+<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#44689a">
+<link rel="stylesheet" href="https://use.typekit.net/vab5wxr.css">
+
+<meta name="theme-color" content="#ffffff">
+<meta property="og:image" content="https://truelayer.com/img/home-page.png">
+<meta property="og:image:width" content="1200" >
+<meta property="og:image:height" content="580" >
+<meta property="og:image" content="https://truelayer.com/img/data-api.png">
+<meta property="og:image:width" content="1200" >
+<meta property="og:image:height" content="481" >
+<meta property="og:image" content="https://truelayer.com/img/payments-api.png">
+<meta property="og:image:width" content="1200" >
+<meta property="og:image:height" content="481" >
+
+<script type="text/javascript" src="/assets/buttonBootstrapSnippet-f13be25e85204b987a433ac605fcf6e241f3dfb9e5bd24af77607d24d9467226.js"></script>
+<script type="text/javascript" src="/assets/svg-pan-zoom-7ce3ae818f34bf1068d09d32c21bb9e1109abd0ea0d01cb4be834a23a0839d6e.js"></script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3954168.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<!-- Google Site Tag -->
+<!-- Global site tag (gtag.js) - Google Ads: 732214158 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-732214158"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-732214158');
+</script>
+<!-- Event snippet for Lead conversion page -->
+<script>
+    function gtag_report_conversion(url) {
+      window.open('https://javascript.info/')
+      var callback = function () {
+        if (typeof(url) != undefined) {
+          window.location = url;
+        }
+      };
+      gtag(event, conversion, {
+          send_to: 'AW-732214158/MiZ4CJGmgMcBEI7nkt0C',
+          event_callback: callback
+      });
+      return false;
+    }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+</head>
+
+<body>
+    <div id="wrapper">
+
+<div id="navbarMobile">
+    <a class="navbar-brand" href="/">
+        <img src="/img/truelayer-logo.svg" height="50px" />
+    </a>
+
+    
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li class="menu-item">
+            <a>
+                <span>Products</span>
+                <span class="menu-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </a>
+        </li>
+        <ul class="submenu" hidden>
+            <li><a href="/data-api" class="submenu-link">Data API</a></li>
+            <li><a href="/payments-api" class="submenu-link">Payments API</a></li>
+            <li><a href="/openbanking" class="submenu-link">Open Banking</a></li>
+            <li><a href="/psd2" class="submenu-link">PSD2</a></li>
+            <li><a href="/security" class="submenu-link">Security</a></li>
+        </ul>
+        <li class="menu-item">
+            <a>
+                <span>Pricing</span>
+                <span class="menu-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </a>
+        </li>
+        <ul class="submenu" hidden>
+            <li><a href="/data-api/#pricing-data" class="submenu-link">Data API</a></li>
+            <li ><a href="/payments-api/#pricing-payments" class="submenu-link">Payments API</a></li>
+        </ul>
+        <li class="menu-item">
+            <a>
+                <span>Developers</span>
+                <span class="menu-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </a>
+        </li>
+        <ul class="submenu" hidden>
+            <li><a href="http://docs.truelayer.com" target="_blank">Documentation</a></li>
+            <li><a href="https://console.truelayer.com" target="_blank">Console</a></li>
+            <li><a href="https://demo.truelayer.com" target="_blank">Demo Application</a></li>
+            <li><a href="https://status.truelayer.com/" target="_blank">Status Page</a></li>
+        </ul>
+        <li class="menu-item">
+            <a>
+                <span>Company</span>
+                <span class="menu-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </a>
+        </li>
+        <ul class="submenu" hidden>
+            <li><a href="/about" class="submenu-link">About TrueLayer</a></li>
+            <li><a href="/contact" class="submenu-link" onclick = "ga('send', 'event', 'Contact us', 'Contact us click', 'Mobile navbar', {nonInteraction: true});">Contact Us</a></li>
+            <li><a href="https://blog.truelayer.com" target="_blank">Blog</a></li>
+            <li><a href="https://truelayer.workable.com" onclick = "ga('send', 'event', 'Workable', 'jobs', 'mobile menu', {nonInteraction: true});" target="_blank">Jobs</a></li>
+        </ul>
+        <li class="menu-item">
+            <a>
+                <span>Legal</span>
+                <span class="menu-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </a>
+        </li>
+        <ul class="submenu" hidden>
+            <li><a href="/privacy" class="submenu-link">Privacy Policy</a></li>
+            <li><a href="/employee-privacy" class="submenu-link">Employee Privacy Policy</a></li>
+            <li><a href="/enduser_tos" class="submenu-link">End User ToS</a></li>
+        </ul>
+        <li><a class="btn btn-outline-white" href="/support">Support</a></li>
+        <li><a class="btn btn-sun" href="https://console.truelayer.com/?auto=login" target="_blank">Log in<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+    </ul>
+
+
+</div>
+
+<div id="navbarMobile-backdrop">
+
+</div>
+
+    <section id="payments-api">
+        <div class="payments-api-img">
+            <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg">
+
+
+<div class="container">
+    <a class="navbar-brand" href="/">
+        <img src="/img/truelayer-logo.svg" height="50px" />
+    </a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-parent">Products</a>
+                    <ul class="dropdown-child box-shadow" role="menu">
+                        <div class="dropdown-arrow"></div>
+                        <li class="product-dropdown">
+                            <a href="/data-api" class="nav-product">
+                                <img src="../img/icons/data-api.svg" alt="Data API" width="70%"/>
+                                <span>Data API</span>
+                                <span class="availability">&nbsp;</span>
+                            </a>
+                            <a href="/payments-api" class="nav-product">
+                                <img src="../img/icons/payments-api.svg" alt="Payments API" width="70%"/>
+                                <span class="nav-product-payments">Payments API</span>
+                                <span class="availability">&nbsp;</span>
+                            </a>
+                        </li>
+                        <li class="secondary">
+                            <a href="/openbanking"><i class="fas fa-file-alt" aria-hidden="true"></i>Open Banking</a>
+                            <a href="/psd2"><i class="fas fa-file-alt" aria-hidden="true"></i>PSD2</a>
+                            <a href="/security"><i class="fa fa-lock" aria-hidden="true"></i>Security</a>
+                            <a href="#" hidden><i class="fa fa-globe" aria-hidden="true"></i>Market Coverage</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-parent">Pricing</a>
+                    <ul class="dropdown-child box-shadow" role="menu">
+                        <div class="dropdown-arrow"></div>
+                        <li>
+                            <a href="/data-api/#pricing-data"><i class="fas fa-fingerprint" aria-hidden="true"></i>Data API</a>
+                           
+                            <a href="/payments-api/#pricing-payments"><i class="fas fa-pound-sign" aria-hidden="true"></i>Payments API</a>
+                           
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-parent">Developers</a>
+                    <ul class="dropdown-child box-shadow" role="menu">
+                        <div class="dropdown-arrow"></div>
+                        <li>
+                            <a href="http://docs.truelayer.com" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>Documentation</a>
+                            <ul>
+                                <li><a href="https://docs.truelayer.com/#getting-started" target="_blank">Getting started</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                <li><a href="https://docs.truelayer.com/#access-methods" target="_blank">Access Methods</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                <li><a href="https://docs.truelayer.com/#data-api-v1" target="_blank">Data API v1</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                <li><a href="https://docs.truelayer.com/#payments-api-v1" target="_blank">Payments API v1</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                                <li><a href="https://docs.truelayer.com/#status-api-v1" target="_blank">Status API v1</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+
+                            </ul>
+                        </li>
+                        <li class="secondary">
+                            <a href="https://console.truelayer.com"><i class="fa fa-code" aria-hidden="true"></i>Console</a>
+                            <a href="https://demo.truelayer.com" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i>Demo Application</a>
+                            <a href="https://status.truelayer.com/" target="_blank"><i class="fas fa-chart-line" aria-hidden="true"></i>Status Page</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-parent">Company</a>
+                    <ul class="dropdown-child box-shadow" role="menu">
+                        <div class="dropdown-arrow"></div>
+                        <li>
+                            <a href="/about"><i class="fa fa-building" aria-hidden="true"></i>About TrueLayer</a>
+                            <a href="/contact"><i class="fa fa-envelope" aria-hidden="true" onclick = "ga('send', 'event', 'Contact us', 'Contact us click', 'Navbar', {nonInteraction: true});"></i>Contact us</a>
+                            <a href="https://blog.truelayer.com/" target="_blank"><i class="fas fa-pencil-alt" aria-hidden="true"></i>Blog</a>
+                        </li>
+                        <li class="secondary">
+
+                            <a href="https://truelayer.workable.com" onclick = "ga('send', 'event', 'Workable', 'jobs', 'Navbar', {nonInteraction: true});" target="_blank">
+                                <i class="far fa-hand-peace" aria-hidden="true"></i>We are hiring!</a>
+                            <p class="menu-text">TrueLayer is always looking for passionate individuals. Join our team to make a difference and shape the new era of financial innovation.</p>
+                            <ul>
+                                <li>
+                                    <a href="https://truelayer.workable.com" onclick = "ga('send', 'event', 'Workable', 'jobs', 'Navbar', {nonInteraction: true});" target="_blank">See open positions</a> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item support-padding">
+                    <a class="btn btn-outline-white" href="http://support.truelayer.com" target="_blank">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-white" href="https://console.truelayer.com/?auto=login" target="_blank">Log in<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+            <div class="container flex title-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Payments API</h1>
+                        <h2 class="no-margin">Receive money instantly</h2>
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="light-weight header-paragraph">Start accepting payments directly into your bank account.</p>
+                        <a class="btn btn-sun btn-shadow" href="https://console.truelayer-sandbox.com/" target="_blank"
+                            role="button" onclick="ga('send', 'event', 'Sandbox Sign up', 'Sign up click', 'Payments API hero', {nonInteraction: true});">Sign
+                            up<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="sub-menu" class="container-fluid cloud-burst-bg">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li>
+                        <a href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works">How it works</a>
+                    </li>
+                    <li>
+                        <a href="#use-cases-payments">Use Cases</a>
+                    </li>
+                    <li>
+                        <a href="#pricing-payments">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#fca">FCA License</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="overview" class="bg-layers-top text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <img src="../img/icons/instant.svg" height="70px" alt="Instant">
+                    <h3>Instant</h3>
+                    <p>Payments go directly in your bank account, so you can access funds immediately.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <img src="../img/icons/secure-payments.svg" height="70px" alt="Secure">
+                    <h3>Secure</h3>
+                    <p>Authentication is handled by your user’s bank, reducing fraud risk and increasing success rates.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <img src="../img/icons/cheaper.svg" height="70px" alt="Cheaper">
+                    <h3>Cost-effective</h3>
+                    <p>Eliminate expensive Card and Direct Debit fees and pay a low fixed-cost per transaction.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <img src="../img/icons/low-risk.svg" height="70px" alt="Low risk">
+                    <h3>Accessible</h3>
+                    <p>Receive payments from over 98% of the population with one simple integration.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <img src="../img/icons/efficient.svg" height="70px" alt="Efficient">
+                    <h3>Simple</h3>
+                    <p>Easily set references to match with your bank statement and set readable references for customers.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <img src="../img/icons/simple-payments.svg" height="70px" alt="Simple">
+                    <h3>Flexible</h3>
+                    <p>Initiate both single and recurring payments into any bank account using one integration.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 wrap-content-how shape-bg yellow-cubes bg-shape white-bg d-flex flex-column justify-content-center">
+                    <h3 class="pt-5">How it works</h3>
+                    <p>An improved payments experience beginning and ending in your application.</p>
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="offset-lg-2 col-lg-2 initiate steps" id="initiate">
+                                <div class="initiate-icon active-icon icons"></div>
+                                <h5 class="active-text">Initiate a<br>
+                                    payment</h5>
+                                <h6 class="description-mobile mt-2 mb-4">Send the payment details to TrueLayer, and we
+                                    handle the bank integration.</h6>
+                                <div class="vertical-dotted-line"></div>
+                            </div>
+                            <div class="col-lg-2 authorise steps" id="authorise">
+                                <div class="authorise-icon icons"></div>
+                                <h5>Authorise <br>
+                                    payment</h5>
+                                <h6 class="description-mobile mt-2 mb-4">User authenticates at their bank and approves
+                                    the transaction.</h6>
+                                <div class="vertical-dotted-line"></div>
+                            </div>
+                            <div class="col-lg-2 monitor steps" id="monitor">
+                                <div class="monitor-icon icons"></div>
+                                <h5>Monitor <br>
+                                    transaction</h5>
+                                <h6 class="description-mobile  mt-2 mb-4">Check transaction progress with a simple API
+                                    call.</h6>
+                                <div class="vertical-dotted-line"></div>
+                            </div>
+                            <div class="col-lg-2 receive steps" id="receive">
+                                <div class="receive-icon icons"></div>
+                                <h5>Receive <br>
+                                    money</h5>
+                                <h6 class="description-mobile mt-2 mb-4">Once the bank has completed the payment, you
+                                    can access your funds.</h6>
+                            </div>
+                            <div class="offset-lg-2 col-lg-8" id="bar">
+                                <div class="process mt-3"></div>
+                                <div class="process-active hover-initiate front-arrow light-azure-bg"></div>
+                            </div>
+                            <div class="offset-lg-2 col-lg-2 active description-use description-use-initiate">
+                                <p>Send the payment details to TrueLayer, and we contact the bank to initiate a
+                                    payment.</p>
+                            </div>
+                            <div class="col-lg-2 description-use description-use-authorise">
+                                <p>User authenticates at their bank and approves the transaction.</p>
+                            </div>
+                            <div class="col-lg-2 description-use description-use-monitor">
+                                <p>Check transaction progress with a simple API call.</p>
+                            </div>
+                            <div class="col-lg-2 description-use description-use-receive">
+                                <p>Once the bank has completed the payment, you can access your funds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases-payments" class="bg-layers-bottom">
+        <div class="use-cases-payments mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                    </div>
+                    <div class="col-lg-6" id="use-cases-content">
+                        <h2>Use Cases</h2>
+                        <button id="financial" type="button" class="btn btn-azure financial use-cases-uses uses">Financial
+                            services</button>
+                        <button id="platforms" type="button" class="btn btn-outline-azure platforms uses">Platforms</button>
+                        <button id="gaming" type="button" class="btn btn-outline-kashmire-blue uses">Gaming</button><br>
+                        <button id="e-commerce" type="button" class="btn btn-outline-violet use-cases-uses uses">E-commerce</button>
+                        <button id="real-estate" type="button" class="btn btn-outline-kashmire-blue real-estate uses">Real
+                            Estate</button>
+                        <button id="travel" type="button" class="btn btn-outline-light-azure use-cases-uses uses">Travel</button>
+                        <button id="pos" type="button" class="btn btn-outline-violet use-cases-uses uses">POS</button>
+                        <div class="use-description financial active">
+                            <p>Embed financial transfers into your customer experience, improving completion rates.
+                                Immediate settlement provides rapid access to funds, simplifying your business process.</p>
+                            <ul>
+                                <li>remittances</li>
+                                <li>crypto</li>
+                                <li>e-wallets</li>
+                                <li>account top-up</li>
+                                <li>peer-to-peer</li>
+                                <li>payment gateways</li>
+                            </ul>
+                        </div>
+                        <div class="use-description platforms">
+                            <p>Connect your platform customers to open banking APIs to for the next generation of
+                                payment-enabled apps.</p>
+                            <ul>
+                                <li>ERP</li>
+                                <li>integration/iPaaS</li>
+                                <li>supply chain</li>
+                                <li>accounting/payroll</li>
+                                <li>CRM</li>
+                            </ul>
+                        </div>
+                        <div class="use-description gaming">
+                            <p>Reduce barriers to onboarding with a simple account load process. Strong customer
+                                authentication reduces the risk of fraud, while bank verification makes KYC/AML
+                                compliance easy.</p>
+                            <ul>
+                                <li>casino games</li>
+                                <li>e-sports</li>
+                                <li>spread betting</li>
+                                <li>exchanges</li>
+                            </ul>
+                        </div>
+                        <div class="use-description e-commerce">
+                            <p>A simpler, cheaper alternative to card payments. Give consumers choice over how they pay
+                                with a method they already have access to.</p>
+                            <ul>
+                                <li>marketplaces</li>
+                                <li>software</li>
+                                <li>cars</li>
+                                <li>events</li>
+                                <li>fashion</li>
+                                <li>general retail</li>
+                            </ul>
+                        </div>
+                        <div class="use-description real-estate">
+                            <p>Simplify the rental or mortgage process by collecting deposits as part of a seamless
+                                user experience, speeding up the time to completion.</p>
+                            <ul>
+                                <li>proptech platforms</li>
+                                <li>letting agencies</li>
+                                <li>property lending</li>
+                                <li>property management</li>
+                                <li>deposit management</li>
+                            </ul>
+                        </div>
+                        <div class="use-description travel">
+                            <p>Make bank transfer a real alternative with a superior user experience. Get paid in
+                                advance to secure your revenues.</p>
+                            <ul>
+                                <li>travel agencies</li>
+                                <li>carriers</li>
+                                <li>accommodation</li>
+                                <li>tours</li>
+                            </ul>
+                        </div>
+                        <div class="use-description pos">
+                            <p>A cheaper and more secure payment option for point of sale systems, offering higher value cardless transactions.</p>
+                            <ul>
+                                <li>mobile point of sale app</li>
+                                <li>retail tills</li>
+                                <li>charitable donations</li>
+                                <li>self serve EPOS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="fca" class="azure-bg">
+  <div class="container text-center">
+      <div class="row">
+          <div id="psd2-container" class="col-xl-8 col-lg-8 col-centered">
+              <span class="white">
+                <i class="fa fa-lightbulb sun approved-icon" aria-hidden="true"></i>
+                <h3 class="mt-2">No PSD2 licence? No Problem</h3>
+                <p class="no-margin">Become an <strong>agent of TrueLayer</strong> and operate under our license while you apply for your own.
+                    Don't want to be authorised? Become our long term agent.</p>
+              </span>
+              <a class="btn btn-sun btn-shadow" href="/contact" role="button" onclick = "ga('send', 'event', 'psd2 agent', {nonInteraction: true});">Learn more</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+    <section id="pricing-payments" class="pricing">
+
+        <svg class="pattern" width="100%" height="100%">
+    
+    <!-- line1 -->
+             
+        <defs>
+            <pattern id="line1-1" x="0" y="0" width="600" height="400" patternUnits="userSpaceOnUse">
+	           <polyline class="stroke" points="259.3,18.5 252,19.4 249.9,26.4 242.6,27.2 240.4,34.2 233.1,35 	"/>
+               <polygon class="stroke" points="153.3,27.1 149.2,33.4 145.8,26.7 142.3,20 149.8,20.4 157.3,20.7 "/>
+	           <path class="stroke" d="M42.4,18.6c2.9,2.8,0.1,5.6,2.9,8.4c2.9,2.8,5.6-0.1,8.5,2.6c2.9,2.8,0.1,5.6,3,8.4s5.6-0.1,8.5,2.6"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-1)"></rect>
+                   
+             
+        <defs>
+            <pattern id="line1-2" x="300" y="0" width="600" height="400" patternUnits="userSpaceOnUse">         
+                <path class="stroke" d="M46.1,31.2c2.8,3.1,7.7,3.3,10.8,0.5c3.1-2.8,3.3-7.7,0.5-10.8"/>
+                <line class="stroke" x1="252" y1="32.5" x2="240.5" y2="25.5"/>
+                <polygon class="stroke" points="150.1,32.6 157.5,31.5 152.8,25.6 148.1,19.8 145.4,26.8 142.6,33.8 "/>
+
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-2)"></rect>             
+    
+     <!-- line2 -->      
+                       
+             
+        <defs>
+            <pattern id="line2-1" x="0" y="100" width="600" height="400" patternUnits="userSpaceOnUse">        
+                <polygon class="stroke" points="199.3,27.1 195.2,33.4 191.8,26.7 188.3,20 195.8,20.4 203.3,20.7 "/>
+                <path class="stroke" d="M100.8,20.3c-1.7,3.9,0.1,8.4,3.9,10c3.9,1.7,8.4-0.1,10-3.9"/>
+                <circle class="fill" cx="281.6" cy="20.5" r="3.5"/>
+	            <polyline class="stroke" points="2.1,28.5 9.2,30.3 13.7,24.6 20.8,26.4 25.3,20.7 32.4,22.5 	"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-1)"></rect> 
+             
+             
+    <defs>
+        <pattern id="line2-2" x="300" y="100" width="600" height="400" patternUnits="userSpaceOnUse">
+	       <path class="stroke" d="M113.7,20.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6
+		c-2.9,2.8-0.1,5.6-3,8.4"/>
+            <path class="stroke" d="M209.4,26.5c-0.6-4.2-4.5-7-8.7-6.4c-4.2,0.6-7,4.5-6.4,8.7"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-2)"></rect> 
+         
+    <!-- colored elements -->          
+             
+             
+    <defs>
+        <pattern id="line2-test" x="300" y="100" width="1900" height="900" patternUnits="userSpaceOnUse">
+            <path class="stroke-color" d="M209.4,26.5c-0.6-4.2-4.5-7-8.7-6.4c-4.2,0.6-7,4.5-6.4,8.7"/>
+
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-test)"></rect>
+             
+    <defs>
+        <pattern id="line3-color" x="600" y="200" width="1900" height="900" patternUnits="userSpaceOnUse">
+	      
+           <line class="stroke-color" x1="252" y1="26.5" x2="240.5" y2="19.5"/>
+        </pattern>    
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line3-color)"></rect>
+    
+     <defs>
+        <pattern id="line4-color" x="0" y="700" width="2300" height="900" patternUnits="userSpaceOnUse">         
+           
+            <polygon class="stroke-color" points="283.5,30.5 290.8,32.4 288.7,25.1 286.7,17.9 281.5,23.3 276.2,28.7 "/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line4-color)"></rect>
+             
+    <defs>
+        <pattern id="line4-dot-color" x="0" y="300" width="2300" height="900" patternUnits="userSpaceOnUse">         
+            <circle class="fill-color" cx="193.6" cy="25.5" r="3.5"/>
+           
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line4-dot-color)"></rect>
+             
+    <defs>
+        <pattern id="line4-line-color" x="1500" y="300" width="1900" height="900" patternUnits="userSpaceOnUse">
+	       <path class="stroke-color" d="M112.7,16.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6
+		   c-2.9,2.8-0.1,5.6-3,8.4"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line4-line-color)"></rect>
+             
+          
+    <defs>
+        <pattern id="line2-lines-color" x="1200" y="100" width="1900" height="900" patternUnits="userSpaceOnUse">        
+	       <polyline class="stroke-color" points="2.1,28.5 9.2,30.3 13.7,24.6 20.8,26.4 25.3,20.7 32.4,22.5 	"/>
+         </pattern>
+        </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-lines-color)"></rect>
+             
+    <defs>
+        <pattern id="line3-wavy-color" x="900" y="600" width="1900" height="900" patternUnits="userSpaceOnUse">
+	        <path class="stroke-color" d="M257.7,19.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6s-0.1,5.6-3,8.4"/>
+        </pattern>
+    </defs> 
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line3-wavy-color)"></rect> 
+    
+     <defs>
+            <pattern id="line1-triangle-color" x="900" y="0" width="1900" height="900" patternUnits="userSpaceOnUse">         
+                <polygon class="stroke-color" points="150.1,32.6 157.5,31.5 152.8,25.6 148.1,19.8 145.4,26.8 142.6,33.8 "/>
+
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-triangle-color)"></rect>
+             
+        <defs>
+            <pattern id="line1-lines-color" x="1200" y="800" width="1900" height="900" patternUnits="userSpaceOnUse">
+	           <polyline class="stroke-color" points="259.3,18.5 252,19.4 249.9,26.4 242.6,27.2 240.4,34.2 233.1,35 	"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-lines-color)"></rect>
+             
+        <defs>
+        <pattern id="line2-circle-color" x="1500" y="500" width="1900" height="900" patternUnits="userSpaceOnUse">
+            <path class="stroke-color" d="M209.4,26.5c-0.6-4.2-4.5-7-8.7-6.4c-4.2,0.6-7,4.5-6.4,8.7"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-circle-color)"></rect>
+             
+     <defs>
+            <pattern id="line1-wavy-color" x="600" y="800" width="1900" height="900" patternUnits="userSpaceOnUse">
+	           <path class="stroke-color" d="M42.4,18.6c2.9,2.8,0.1,5.6,2.9,8.4c2.9,2.8,5.6-0.1,8.5,2.6c2.9,2.8,0.1,5.6,3,8.4s5.6-0.1,8.5,2.6"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-wavy-color)"></rect>
+             
+         <defs>
+            <pattern id="line1-lines1-color" x="0" y="0" width="2300" height="900" patternUnits="userSpaceOnUse">
+	           <polyline class="stroke-color" points="259.3,18.5 252,19.4 249.9,26.4 242.6,27.2 240.4,34.2 233.1,35 	"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-lines1-color)"></rect>
+             
+             
+             
+        <defs>
+            <pattern id="line1-line-color" x="1500" y="0" width="1900" height="900" patternUnits="userSpaceOnUse">         
+                <line class="stroke-color" x1="252" y1="32.5" x2="240.5" y2="25.5"/>
+                <polygon class="stroke" points="150.1,32.6 157.5,31.5 152.8,25.6 148.1,19.8 145.4,26.8 142.6,33.8 "/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line1-line-color)"></rect>
+             
+              
+        <defs>
+            <pattern id="line2-circle1-color" x="0" y="500" width="2300" height="900" patternUnits="userSpaceOnUse">        
+                <path class="stroke-color" d="M100.8,20.3c-1.7,3.9,0.1,8.4,3.9,10c3.9,1.7,8.4-0.1,10-3.9"/>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#line2-circle1-color)"></rect>      
+             
+             
+  
+        
+             
+  <!-- line3 -->         
+             
+       
+    <defs>
+        <pattern id="line3-1" x="0" y="200" width="600" height="400" patternUnits="userSpaceOnUse">
+	       <circle class="fill" cx="55.6" cy="24.5" r="3.5"/>
+           <line class="stroke" x1="252" y1="26.5" x2="240.5" y2="19.5"/>
+	       <path class="stroke" d="M163.7,13.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6s-0.1,5.6-3,8.4"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line3-1)"></rect>
+             
+    <defs>
+        <pattern id="line3-2" x="300" y="200" width="600" height="400" patternUnits="userSpaceOnUse">
+	        <path class="stroke" d="M257.7,19.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6s-0.1,5.6-3,8.4"/>
+            <polyline class="stroke" points="41.7,19.2 43.9,26.2 51.2,27 53.3,34 60.6,34.8 62.8,41.8 	"/>
+            <polygon class="stroke" points="144.1,25.1 150.4,20.9 150.9,28.4 151.4,35.9 144.7,32.6 137.9,29.4 "/>
+        </pattern>
+    </defs> 
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line3-2)"></rect> 
+             
+    <!-- line4 -->          
+             
+    <defs>
+        <pattern id="line4-1" x="0" y="300" width="600" height="400" patternUnits="userSpaceOnUse">         
+            <path class="stroke" d="M20.7,32.4c1.7-3.8,0-8.4-3.8-10.1c-3.8-1.7-8.4,0-10.1,3.8"/>
+            <circle class="fill" cx="193.6" cy="25.5" r="3.5"/>
+	        <polyline class="stroke" points="89.1,23.5 96.2,25.3 100.7,19.6 107.8,21.4 112.3,15.7 119.4,17.5 	"/>
+            <polygon class="stroke" points="283.5,30.5 290.8,32.4 288.7,25.1 286.7,17.9 281.5,23.3 276.2,28.7 "/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line4-1)"></rect> 
+             
+             
+    <defs>
+        <pattern id="line4-2" x="300" y="300" width="600" height="400" patternUnits="userSpaceOnUse">
+	       <path class="stroke" d="M112.7,16.1c-2.9,2.8-5.6-0.1-8.5,2.6c-2.9,2.8-0.1,5.6-2.9,8.4c-2.9,2.8-5.6-0.1-8.5,2.6
+		   c-2.9,2.8-0.1,5.6-3,8.4"/>
+           <circle class="fill" cx="197.6" cy="24.5" r="3.5"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#line4-2)"></rect> 
+                      
+</svg>     
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12 section-pattern-margin-top">
+                    <h2>Pricing</h2>
+                    <p class="mb-5">A simple solution for all your payment scenarios</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section-pattern-flex">
+            <div class="row">
+                <div id="developer" class="col-lg-4 col-md-6 text-center mb-5 building-block">
+                    <div class="white-bg box">
+                        <div class="pricing-img-container white" id="payment-dev-bg">
+                            <h4>Develop</h4>
+                            <div class="price">
+                                <div class="price-info">
+                                    <h2 id="free">Free</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-sun btn-shadow" href="https://console.truelayer-sandbox.com/" role="button"
+                        target="_blank" onclick="ga('send', 'event', 'Sandbox Sign up', 'Sign up click', 'Payments API pricing - Developer', {nonInteraction: true});">Get Started</a>
+                        <div class="list-container" id="features">
+                            <h4 class="py-2 pricing-table-title dark-violet">Features</h4>
+                            <ul class="features-list text-left">
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Sandbox env
+                                </li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Production env
+                                </li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Full UI customisation</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Single immediate payments</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Recurring payments</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    White-labelling</li>
+                            </ul>
+                        </div>
+                        <div class="list-container light-gray-bg" id="services">
+                            <h4 class="py-2 pricing-table-title dark-violet">Services</h4>
+                            <ul class="services-list text-left">
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Integration consulting</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Premium support</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Account management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="scale" class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="white-bg box">
+                        <div class="pricing-img-container white" id="payment-scale-bg">
+                            <h4>Scale</h4>
+                            <div class="price">
+                                <div class="price-info">
+                                    <h2 style="margin-top:15px;">£0.20</h2>
+                                    <h6>per transaction</h6>
+                                </div>
+                            </div> 
+                        </div>
+                        <a class="btn btn-sun btn-shadow" href="/contact" role="button" onclick="ga('send', 'event', 'Contact us', 'Contact us click', 'Payments API pricing - Scale', {nonInteraction: true});">Contact
+                            us</a>
+                        <div class="list-container" id="features">
+                            <h4 class="py-2 pricing-table-title dark-violet">Features</h4>
+                            <ul class="features-list text-left">
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Sandbox env
+                                </li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Production env
+                                </li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Full UI customisation</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Single immediate payments</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Recurring payments</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    White-labelling</li>
+                            </ul>
+                        </div>
+                        <div class="list-container light-gray-bg" id="services">
+                            <h4 class="py-2 pricing-table-title dark-violet">Services</h4>
+                            <ul class="services-list text-left">
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Integration consulting</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Premium support</li>
+                                <li class="py-2 dark-violet-80 disabled"><i class="fa fa-times" aria-hidden="true"></i>
+                                    Account management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="enterprise" class="col-lg-4 col-md-6 col-centered text-center mb-5 building-block-3">
+                    <div class="white-bg box">
+                        <div class="pricing-img-container white" id="payment-enterprise-bg">
+                            <h4>Enterprise</h4>
+                            <div class="price">
+                                <div class="price-info">
+                                    <h2>CUSTOM</h2>
+                                </div>
+                            </div> 
+                        </div>
+                        <a class="btn btn-sun btn-shadow" href="/contact" role="button" onclick="ga('send', 'event', 'Contact us', 'Contact us click', 'Payments API pricing - Enterprise', {nonInteraction: true});">Contact
+                            us</a>
+                        <div class="list-container" id="features">
+                            <h4 class="py-2 pricing-table-title dark-violet">Features</h4>
+                            <ul class="features-list text-left">
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Sandbox env
+                                </li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Production env
+                                </li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Full UI customisation</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Single immediate payments</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Recurring payments</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    White-labelling</li>
+                            </ul>
+                        </div>
+                        <div class="list-container light-gray-bg" id="services">
+                            <h4 class="py-2 pricing-table-title dark-violet">Services</h4>
+                            <ul class="services-list text-left">
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Integration consulting</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Premium support</li>
+                                <li class="py-2 dark-violet-80"><i class="fa fa-check green" aria-hidden="true"></i>
+                                    Account management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+</body>
+
+
+
+<!-- ENGLISH VERSION -->
+<!-- Back to top -->
+<a id="backToTop" title="Back to top" href="#">Back to top<i class="fa fa-arrow-up" style="margin-left:8px;"></i></a>
+<!-- Footer -->
+
+<footer>
+  <div id="main-footer" class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-6 col-12" id="newsletter-pre" style="display: block;">
+          <h3>Please stay in touch!</h3>
+          <p>Don’t miss new features, market coverage, regulations, and more.</p>
+        </div>
+        <div class="col col-lg-6 col-12">
+          <form id="newsletter">
+            <div class="row signup-form">
+              <!--[if lte IE 8]>
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+              <![endif]-->
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+              <script>
+                hbspt.forms.create({
+                portalId: "3954168",
+                formId: "3a521d44-48f8-4cdb-bc50-b8953516b34a",
+                submitButtonClass: 'btn btn-outline-azure azure hs-btn',
+                formInstanceId: 'signup-form',
+                cssClass:'hubspot-form'
+
+              });
+              </script>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row footer-menu">
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Products</p>
+          <ul>
+            <li>
+              <a href="/data-api">Data API</a>
+            </li>
+            <li>
+              <a href="/payments-api">Payments API</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Public Policy</p>
+          <ul>
+            <li>
+              <a href="/psd2">PSD2</a>
+            </li>
+            <li>
+              <a href="/openbanking">Open Banking</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Developers</p>
+          <ul>
+            <li>
+              <a href="http://docs.truelayer.com/">Documentation</a>
+            </li>
+            <li>
+              <a href="http://support.truelayer.com" target="_blank">FAQs</a>
+            </li>
+            <li>
+              <a href="https://truelayer.zendesk.com/hc/en-us/requests/new" target="_blank">Tickets</a>
+            </li>
+            <li>
+              <a href="https://status.truelayer.com" target="_blank">Status page</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Company</p>
+          <ul>
+            <li>
+              <a href="/contact" onclick = "ga('send', 'event', 'Contact us', 'Contact us click', 'Footer', {nonInteraction: true});">Contact us</a>
+            </li>
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="https://blog.truelayer.com/" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a href="https://truelayer.workable.com" onclick = "ga('send', 'event', 'Workable', 'jobs', 'footer', {nonInteraction: true});" target="_blank">Jobs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Legal</p>
+          <ul>
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/employee-privacy">Employee Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/enduser_tos">End User ToS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <p>Consumers</p>
+          <ul>
+            <li>
+              <a href="https://psu.truelayer.com" target="_blank">Consumer Portal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-footer" class="container-fluid">
+    <div class="row text-center">
+      <div id="social" class="container">
+        <div class="col-lg-12">
+          <a href="https://www.facebook.com/TrueLayerAPI/" target="_blank" class="social-link facebook"></a>
+          <a href="https://twitter.com/truelayer" target="_blank" class="social-link twitter"></a>
+          <a href="https://blog.truelayer.com/" target="_blank" class="social-link medium"></a>
+          <a href="https://www.linkedin.com/company/17954388/" target="_blank" class="social-link linkedin"></a>
+          <a href="https://www.youtube.com/channel/UCgCJvUI1ViLmlNzwPoRjcTw" target="_blank" class="social-link youtube"></a>
+          <a href="https://www.producthunt.com/posts/truelayer" target="_blank" class="social-link producthunt"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <p style="padding-bottom:0;">
+          <script type="text/JavaScript">
+          var theDate= new Date();
+          document.write("© TrueLayer Limited " + theDate.getFullYear());
+          </script>
+        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-10 mb-5 col-centered">
+              <p>TrueLayer is regulated by the UK Financial Conduct Authority under the Payment Services Regulations 2017 as an Authorised Payment
+              Institution to provide account information services and payment initiation services (Firm Reference Number: 793171).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<script>
+  if (Cookies.get("accepted_cookies") !== "true") {
+    document.write(" <input class='checkbox-cb' id='checkbox-cb' type='checkbox'/> <div class='cookie-bar box-shadow'><span class='message'>By using this website you agree to our <a href='/privacy/#section-cookies'>cookie policy</a>.</span><label for='checkbox-cb' class='close-cb'><i class='fa fa-times' aria-hidden='true'></i></label></div>");
+  }
+</script>
+
+
+
+</div>
+<!-- LinkedIn Insight Tag -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "1901396";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(){var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})();
+  </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1901396&fmt=gif" />
+    </noscript>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"> </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+
+<script src="/js/custom.js"></script>
+<script src="/js/buttonBootstrapSnippet.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+<!-- Typekit -->
+<script src="https://use.typekit.net/vab5wxr.js"></script>
+<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-91842848-1', 'auto');
+  ga('send', 'pageview');
+  ga('config', 'UA-91842848-1');
+
+</script>
+<!-- Intercom -->
+<script>
+  window.intercomSettings = {
+    app_id: "z9chm81s"
+  };
+</script>
+<script>(function () {
+    var w = window;
+    var ic = w.Intercom;
+    if (typeof ic === "function") {
+      ic('reattach_activator');
+      ic('update', intercomSettings);
+    } else {
+      var d = document;
+      var i = function () {
+        i.c(arguments)
+      };
+      i.q = [];
+      i.c = function (args) {
+        i.q.push(args)
+      };
+      w.Intercom = i;
+      function l() {
+        var s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://widget.intercom.io/widget/z9chm81s';
+        var x = d.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+
+      if (w.attachEvent) {
+        w.attachEvent('onload', l);
+      } else {
+        w.addEventListener('load', l, false);
+      }
+    }
+  })()</script>
+</html>
+
+<script src="/js/product-pages.js"></script>
