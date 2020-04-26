@@ -743,31 +743,31 @@ footer form .form-control:focus, .hbspt-form .hs-input:focus {
 }
 
 #social .twitter {
-    background-image: url("/img/social/twitter.svg");
+    background-image: url("./img/social/twitter.svg");
 }
 
 #social .github {
-    background-image: url("/img/social/github.svg");
+    background-image: url("./img/social/github.svg");
 }
 
 #social .medium {
-    background-image: url("/img/social/medium.svg");
+    background-image: url("./img/social/medium.svg");
 }
 
 #social .facebook {
-    background-image: url("/img/social/facebook.svg");
+    background-image: url("./img/social/facebook.svg");
 }
 
 #social .producthunt {
-    background-image: url("/img/social/producthunt.svg");
+    background-image: url("./img/social/producthunt.svg");
 }
 
 #social .linkedin {
-    background-image: url("/img/social/linkedin.svg");
+    background-image: url("./img/social/linkedin.svg");
 }
 
 #social .youtube{
-    background-image: url("/img/social/youtube.svg");
+    background-image: url("./img/social/youtube.svg");
 }
 
 footer #sub-footer {
