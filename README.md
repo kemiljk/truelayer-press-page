@@ -47,3 +47,10 @@
 * I created two bespoke illustrations in the style of TrueLayer's brand
 * These illustrations are featured in the Hero header and the Twitter section's bg
 * These are both exported to SVG and included in the code as well as the zip package in the 'Design Assets' folder
+
+## Accessibility
+
+* I chose to alter one element of the existing system in aid of accessibility. I wanted to record this here so it's not seen as a mistake.
+* The current Sun btn looks great, but the white text at that small size on that yellow background fails common accessibility tests for size and contrast
+* As such, I've created a new text class to temporarily override this behaviour and replace white text with Black (#2d2d2d as per guidelines)
+* I strongly believe this should be considered a global change for better accessibility in general but appreciate this can be tricky when aesthetics are at play

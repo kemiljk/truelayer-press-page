@@ -213,3 +213,7 @@ img.border-radius-top {
 .black-text {
 	color: #2d2d2d;
 }
+
+.black-text:hover {
+	color: #2d2d2d;
+}
