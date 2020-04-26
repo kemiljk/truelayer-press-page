@@ -19,6 +19,8 @@
 * Once this was done, I could build the relevant blocks up inline, following the TrueLayer styleguide as best as I could from inspecting source and reviewing the CSS files
 * Finally, once I had a clear structure and all blocks and classes in place, I could go about creating the custom classes I needed and designing some bespoke illustrations
 
+## Main content
+
 ### Article hero
 
 * The article hero is the first bespoke object I created, it's the page hero article and is reserved for the most important announcements
